@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-const AnswerContext = createContext([[], ()=>{}])
+const AnswerContext = createContext<any>(null)
 
 export default AnswerContext;
 
