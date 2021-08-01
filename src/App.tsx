@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import AnswerContext from './Context/answerContext'
 import Question from './containers/question'
-
+import {ImPrevious2, ImNext2} from "react-icons/im";
 import data from './data'
 import './App.css';
 
@@ -15,6 +15,7 @@ function App() {
   const [background, setBackground] = useState(['#000','#FFF'])
   const [answer, setAnswer] = useState<IAnswer>({})
   const [score, setScore] = useState(0)
+  const [question, setQuestion] = useState(0)
 
   useEffect(()=> {
       calculateScore() // eslint-disable-next-line
@@ -56,9 +57,10 @@ function App() {
 
 
   return (
-    <AnswerContext.Provider value={{changeAnswer, score}}>
+    <AnswerContext.Provider value={{changeAnswer, score, question}}>
     <div className="App" style= {{background: `linear-gradient(180deg, ${background[0]} 0%, ${background[1]} 100%)`}}>
-      <Question score={score}/>
+
+      <Question />
     </div>
     </AnswerContext.Provider>
   );

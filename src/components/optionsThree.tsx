@@ -10,7 +10,7 @@ interface IProp {
 
 const OptionsThree = (props:IProp) => {
   const [selected, setSelected] = useState('')
-  const {changeAnswer, score} = useContext(AnswerContext)
+  const {changeAnswer, score, question} = useContext(AnswerContext)
 
   useEffect(()=> {
     randomPosition()
@@ -44,7 +44,7 @@ const OptionsThree = (props:IProp) => {
   }
 
   const correctCheck = () => {
-    if (data.answers.length === score) {
+    if (data[question].answers.length === score) {
       return true
     }
     return false

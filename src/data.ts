@@ -9,7 +9,8 @@ interface options {
   options:string[]
 }
 
-const data:quiz = {
+const data:quiz[] = [
+  {
   'id': 1,
   'question': 'European Capitals',
   'answers':['London', 'Paris', 'Rome', 'Madrid'],
@@ -25,7 +26,25 @@ const data:quiz = {
   },{
     'id':3, 
     'options': ['Madrid', 'Mabrib']}
-  ] 
-}
+  ]},
+  {
+    'id': 1,
+    'question': 'United States of America States ',
+    'answers':['California', 'Washington', 'Florida', 'New Mexico'],
+    'options':[{
+      'id':0, 
+      'options':['San Francisco', 'California', 'LA']
+    },{
+      'id':1, 
+      'options': ['Washington', 'Washington D.C']
+    },{
+      'id':2, 
+      'options': ['Flo Rida', 'Miami', 'Florida']
+    },{
+      'id':3, 
+      'options': ['New Mexico', 'Mexico']}
+    ]},
+
+]
 
 export default data
