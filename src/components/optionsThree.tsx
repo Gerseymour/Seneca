@@ -39,7 +39,6 @@ const OptionsThree = (props:IProp) => {
   }
 
   function changeSelected(className: string, optionAnswer:number) {
-    console.log(className, props.options[optionAnswer])  
     setSelected(className)
   }
 
