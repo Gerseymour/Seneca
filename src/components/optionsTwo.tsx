@@ -23,7 +23,7 @@ const Options = (props:IProp) => {
     } else {
       changeAnswer(props.id,props.options[0])
     } // eslint-disable-next-line
-  }, [selected])
+  }, [selected, question])
 
   function randomPosition() {
     const randomNumber = Math.floor(Math.random()*2)

@@ -27,5 +27,7 @@ You will also see any lint errors in the console.
 
 ## Project limitations
 
--
+-CSS overlays when using 3 options on longer answers and smaller screens
+-relies on the data structure found in data.ts
+-does not randomise question or answer order
 

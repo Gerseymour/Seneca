@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react';
 import AnswerContext from './Context/answerContext'
 import Question from './containers/question'
-import {ImPrevious2, ImNext2} from "react-icons/im";
 import data from './data'
 import './App.css';
 
@@ -34,7 +33,7 @@ function App() {
     let score = 0
     for(let key in answer){
       if(key=== undefined) return
-      if (answer[key]===data.answers[key])
+      if (answer[key]===data[question].answers[key])
       score++;
     }
     setScore(score)
@@ -55,12 +54,37 @@ function App() {
     setBackground(colorMap[(score)]) // eslint-disable-next-line
   }, [score])
 
+  const changeQuestion = (change:string) => {
+    if (change==='+') {
+      setQuestion((prev)=> prev+1)
+    }
+    if (change==='-') {
+      setQuestion((prev)=> prev-1)
+    }
+  }
+  const pageCheck = (nav:string) => {
+    if (nav==='+') {
+      if (question === data.length-1) {
+        return true
+      }
+    }
+    if (nav==='-') {
+      if (question === 0) {
+        return true
+      }
+    }
+    return false
+  }
+
+  
+
 
   return (
     <AnswerContext.Provider value={{changeAnswer, score, question}}>
     <div className="App" style= {{background: `linear-gradient(180deg, ${background[0]} 0%, ${background[1]} 100%)`}}>
-
+      <button className={`nav-button ${pageCheck('-')?'disabled':''}`} style={{color:`${background[0]}`}} onClick={()=>changeQuestion('-')}>Previous</button>
       <Question />
+      <button className={`nav-button ${pageCheck('+')?'disabled':''}`} style={{color:`${background[0]}`}} onClick={()=>changeQuestion('+')}>Next</button>
     </div>
     </AnswerContext.Provider>
   );

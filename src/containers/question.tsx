@@ -19,7 +19,7 @@ const Question = () => {
 
   return (
     <div className='question-container'>
-      <h1> {data[question]} </h1>
+      <h1> {data[question].question} </h1>
       {optionList}
       <h2>The answer is {score===data[question].answers.length?'correct':'incorrect'}</h2>
     </div>

@@ -28,12 +28,12 @@ const data:quiz[] = [
     'options': ['Madrid', 'Mabrib']}
   ]},
   {
-    'id': 1,
+    'id': 2,
     'question': 'United States of America States ',
     'answers':['California', 'Washington', 'Florida', 'New Mexico'],
     'options':[{
       'id':0, 
-      'options':['San Francisco', 'California', 'LA']
+      'options':['Seattle', 'California', 'LA']
     },{
       'id':1, 
       'options': ['Washington', 'Washington D.C']
@@ -44,6 +44,24 @@ const data:quiz[] = [
       'id':3, 
       'options': ['New Mexico', 'Mexico']}
     ]},
+    {
+      'id': 3,
+      'question': 'What are the ideal conditions inside an office?',
+      'answers':['good pay', 'less meetings', 'free coffee', 'dog in office'],
+      'options':[{
+        'id':0, 
+        'options':['good pay','bad pay']
+      },{
+        'id':1, 
+        'options': ['lots of meetings', 'less meetings']
+      },{
+        'id':2, 
+        'options': ['expensive coffee', 'free coffee']
+      },{
+        'id':3, 
+        'options': ['dog in office', 'bear in office']}
+      ]},
+
 
 ]
 

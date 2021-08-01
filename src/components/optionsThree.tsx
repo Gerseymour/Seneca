@@ -25,7 +25,7 @@ const OptionsThree = (props:IProp) => {
     }else {
       changeAnswer(props.id,props.options[2])
     } // eslint-disable-next-line
-  }, [selected])
+  }, [selected, question])
 
   function randomPosition() {
     const randomNumber = Math.floor(Math.random()*3)
