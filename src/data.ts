@@ -15,13 +15,13 @@ const data:quiz = {
   'answers':['London', 'Paris', 'Rome', 'Madrid'],
   'options':[{
     'id':0, 
-    'options':['Lunden','London']
+    'options':['Lunden','London', 'Libdon']
   },{
     'id':1, 
     'options': ['Paris', 'Payris']
   },{
     'id':2, 
-    'options': ['Roam', 'Rome']
+    'options': ['Roam', 'Rome', 'Rone']
   },{
     'id':3, 
     'options': ['Madrid', 'Mabrib']}

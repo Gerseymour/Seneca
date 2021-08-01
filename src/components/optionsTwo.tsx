@@ -18,7 +18,7 @@ const Options = (props:IProp) => {
   },[] )
 
   useEffect(()=> {
-    if (selected==='50%') {
+    if (selected==='selecter-optiontwo') {
       changeAnswer(props.id,props.options[1])
     } else {
       changeAnswer(props.id,props.options[0])
@@ -28,19 +28,17 @@ const Options = (props:IProp) => {
   function randomPosition() {
     const randomNumber = Math.floor(Math.random()*2)
     if (randomNumber===1) {
-      setSelected('0%')
+      setSelected('selecter-optionone')
     } else {
-    setSelected('50%')
+    setSelected('selecter-optiontwo')
     }
   }
 
   function changeSelected() {
-    if (selected==='50%') {
-      setSelected('0%')
-      changeAnswer(props.id,props.options[0])
+    if (selected==='selecter-optiontwo') {
+      setSelected('selecter-optionone')
     } else {
-      setSelected('50%')
-      changeAnswer(props.id,props.options[1])
+      setSelected('selecter-optiontwo')
     }
   }
 
@@ -55,7 +53,7 @@ const Options = (props:IProp) => {
 
   return (
     <button className={`options-container ${correctCheck()?'disabled':''}`} onClick={()=>changeSelected()}>
-      <div className='selecter' style={{left:`${selected}`}}/>
+      <div className={`selecter ${selected}`} />
       <p className='options-one'>{props.options[0]}</p>
       <p className='options-two'>{props.options[1]}</p>
     </button>

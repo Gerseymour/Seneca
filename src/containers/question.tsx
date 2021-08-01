@@ -1,5 +1,6 @@
 import data from '../data'
-import Option from '../components/options'
+import Option from '../components/optionsTwo'
+import OptionThree from '../components/optionsThree'
 import '../App.css'
 
 interface IProp {
@@ -10,6 +11,9 @@ const Question = (props:IProp) => {
 
 
   const optionList = data.options.map((item) => {
+    if (item.options.length === 3) {
+      return <OptionThree options={item.options} id={item.id}/>
+    }
     return <Option options={item.options} id={item.id} />
   })
 

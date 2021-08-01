@@ -21,6 +21,7 @@ function App() {
   }, [answer]) 
 
   const changeAnswer = (id:number, option:string) => {
+    console.log(id, option, 'context function')
     const input:IAnswer = {}
     input[id]= option
     setAnswer((prev) => {
@@ -34,7 +35,6 @@ function App() {
       if(key=== undefined) return
       if (answer[key]===data.answers[key])
       score++;
-      console.log(score,'score')
     }
     setScore(score)
   }
